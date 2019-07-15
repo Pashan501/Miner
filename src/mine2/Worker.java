@@ -55,10 +55,10 @@ public class Worker  implements Runnable{
 				
 				
 			}
-	      for(int i = 0; i <=3; i++) 
+	      for(int i = 0; i <3; i++) 
 	      {
 	        try {
-	          TimeUnit.SECONDS.sleep(2);
+	          TimeUnit.SECONDS.sleep(1);
 	        } catch (InterruptedException e) {
 	          e.printStackTrace();
 	        }
@@ -76,6 +76,7 @@ public class Worker  implements Runnable{
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	      }
+	      
 	      try {
 	    	  carriage=changer.exchange(null);
 	        System.out.println("Taking the cart from Worker2");

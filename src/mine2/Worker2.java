@@ -48,7 +48,7 @@ public class Worker2 implements Runnable{
 	    while(true) 
 	    {
 	      try {
-	    	  Carriage cart = changer.exchange(null);
+	    	  Carriage carriage = changer.exchange(null);
 	      } catch (InterruptedException e) {
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
@@ -72,13 +72,7 @@ public class Worker2 implements Runnable{
 	          // TODO Auto-generated catch block
 	          e.printStackTrace();
 	        }
-	          try {
-	            changer.exchange(carriage);
-	          } catch (InterruptedException e1) {
-	            // TODO Auto-generated catch block
-	            e1.printStackTrace();
-	          }
-	          System.out.println("Picking the cart from Worker3");
+	System.out.println("Picking the cart from Worker3");
 	          System.out.println("Reciving cart to Worker1...");
 	          try {
 	            TimeUnit.SECONDS.sleep(5);
@@ -86,6 +80,13 @@ public class Worker2 implements Runnable{
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	          }
+	          try {
+	            changer.exchange(carriage);
+	          } catch (InterruptedException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	          }
+	          
 	    }
 	    
 	      }

@@ -75,6 +75,12 @@ public class Worker3 implements Runnable {
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	      }
+	      try {
+	          TimeUnit.SECONDS.sleep(5);
+	        } catch (InterruptedException e) {
+	          // TODO Auto-generated catch block
+	          e.printStackTrace();
+	        }
 	    }
 	    
 	  }
